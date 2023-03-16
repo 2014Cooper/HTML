@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* *: 針對所有元素 將所有預留空間歸零 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        /* nav area*/
+
+        nav {
+            position: fixed;
+            top: 0;
+            /* bottom: 0; */
+            width: 100%;
+
+        }
+
+        ul {
+            list-style-type: none;
+            background-color: lightgray;
+
+
+
+        }
+
+        /* ul > li: ul 所有子層 >代表下面所有 */
+        ul>li {
+            display: inline-block;
+            line-height: 100px;
+            /* margin-left: 10px;
+            margin-right: 10px; */
+            margin: 20px;
+        }
+
+        /* ul a 等同於 ul > li > a */
+        ul a {
+            text-decoration: none;
+            color: black;
+        }
+
+        /* #globlenav>li {} */
+
+
+        /* 包含globlenav所有子選單用空格 */
+        /* #globlenav li {} */
+
+
+        /* main */
+        main {
+            padding-top: 150px;
+            /* margin-top: 20px; */
+        }
+
+        section {
+            height: 100vh;
+            font-size: 3rem;
+        }
+
+        /* id要用# */
+        #backToTop {
+            background-color: red;
+            width: fit-content;
+            /* 順序:上右下左 */
+            /* padding-top: 2px;
+            padding-right: 10px;
+            padding-bottom: 2px;
+            padding-left: 10px; */
+            /* 以下寫法等同於上面 */
+            padding: 2px, 10px;
+            border-radius: 10px;
+            position: fixed;
+            right: 50px;
+            bottom: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <!-- <ul id="globlenav">
+            <li><a href="./1.html5.html">Link1</a></li>
+            <ul>
+                <li></li>
+            </ul>
+            <li><a href="./2.inline.html">Link2</a></li>
+            <li><a href="./3.block.html">Link3</a></li>
+            <li><a href="./4.inline-block.html">Link4</a></li>
+        </ul> -->
+
+        <ul>
+            <li><a href="./02. img.html">img</a></li>
+            <li><a href="./11. navbar.html">navbar</a></li>
+            <li><a href="./3.block.html">Link3</a></li>
+            <li><a href="./4.inline-block.html">Link4</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- section{section$}*6 -->
+        <section>section1</section>
+        <section>section2</section>
+        <section>section3</section>
+        <section>section4</section>
+        <section>section5</section>
+        <section>section6</section>
+    </main>
+
+    <div id="backToTop">
+        back
+
+    </div>
+
+
+</body>
+
+</html>

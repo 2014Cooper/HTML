@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap2 {
+            width: 700px;
+            height: 700px;
+            background-color: black;
+            position: relative;
+        }
+
+        .wrap {
+            /* 在外層使用position: relative，可以限制子層的位置，以之為參考，否則會將整個網頁做為參考 */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            /* 利用扣除自己的寬高計算50%，來達到置中 */
+            transform: translate(-50%, -50%);
+
+            width: 400px;
+            height: 400px;
+            background-color: cornflowerblue;
+        }
+
+
+        /* 本來box不會重疊，但是利用position就會重疊，是用特殊排版，但不適合用排版，會導致後面的區塊無法往前，產生很多空白空間 */
+        .box {
+            width: 50px;
+            height: 20px;
+            background-color: teal;
+
+            /* 相對位置，影響最小 */
+            /* position: relative; */
+            left: 50px;
+            top: 50px;
+            /* left: 210px; */
+
+            /* 絕對位置會使區塊被隔離，後面的區塊會無視此區塊，影響最大 */
+            position: absolute;
+            right: 0px;
+            top: 0px;
+
+            /* fix是固定在網頁上特定的位置 */
+
+            /* 以下用來設計特定大小模塊 */
+            /* width: auto;
+            height: auto;
+            background-color: teal;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0; */
+            z-index: 0;
+
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: brown;
+
+            /* 有設定position後才會有Z軸 */
+            /* 普通z普通z-index不會大於1000，大於1000給特別重要的，像是功能選單 */
+            position: relative;
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap2">
+        <div class="wrap">
+            <div class="box">hi</div>
+            <div class="box2">box2</div>
+        </div>
+    </div>
+
+</body>
+
+</html>

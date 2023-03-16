@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>img</title>
+    <!-- 調圖片樣式方法1 link -->
+    <!-- <link rel="stylesheet" href="./css/02. img.css"> -->
+
+    <!-- 調圖片樣式方法2 style -->
+    <!-- <style>
+        img{
+            width: 200px;
+            height: 200px;
+        }
+    </style> -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        ul {
+            list-style-type: none;
+            background-color: lightgray;
+
+
+        }
+
+        /* ul > li: ul 所有子層 >代表下面所有 */
+        ul>li {
+            display: inline-block;
+            line-height: 100px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        /* ul a 等同於 ul > li > a */
+        ul a {
+            text-decoration: none;
+            color: black;
+        }
+
+
+        /* 圖片class修改方法1 */
+        /* img[class="wolf1_img"]{
+            width: 200px;
+            height: 200px;
+        } */
+
+        /* 圖片class修改方法2 */
+        .wolf1_img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <ul>
+        <li><a href="./02. img.html">img</a></li>
+        <li><a href="./11. navbar.html">navbar</a></li>
+        <li><a href="./3.block.html">Link3</a></li>
+        <li><a href="./4.inline-block.html">Link4</a></li>
+    </ul>
+
+
+    <!-- 利用class分類來達到對特定class修改 -->
+    <img class="wolf1_img" src="https://cdn.pixabay.com/photo/2017/10/07/15/27/wolf-2826741__340.jpg" alt="">
+    <img src="https://cdn.pixabay.com/photo/2016/04/18/10/17/wolf-1336229__340.jpg" alt="">
+
+    <!-- 調圖片樣式方法3 每個圖各自改style 不建議 -->
+    <!-- <img src="https://cdn.pixabay.com/photo/2017/10/07/15/27/wolf-2826741__340.jpg" alt="" style="width: 1000px; height: 200px"> -->
+
+</body>
+
+</html>

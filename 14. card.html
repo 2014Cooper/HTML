@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card</title>
+    <style>
+        .container {
+            width: 100%;
+
+        }
+
+        .row {
+            /* display: flex; */
+            font-size: 0;
+        }
+
+        .col {
+            /* 100%/3除不盡，寫到小數下5-6位 */
+            /* width: 33.333333%; */
+            width: 100%;
+            box-sizing: border-box;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        /* 針對不同螢幕外框大小有所不同 rwd */
+        /* min-width為最小生效尺寸 */
+        /* 此為手機優先寫法 */
+        @media screen and (min-width: 576px) {
+            .col {
+                width: 50%;
+            }
+
+        }
+
+        @media screen and (min-width: 768px) {
+            .col {
+                width: 33.3333333%;
+            }
+        }
+
+        @media screen and (min-width: 992px) {
+            .col {
+                width: 25%;
+            }
+        }
+
+        .card img {
+            width: 100%;
+
+        }
+
+        .card {
+            font-size: 20px;
+        }
+
+        span {
+            color: darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col">
+
+                        <div class="card">
+                            <img src="./imgs/UzU4kzP.jpg" alt="">
+                            <h3>凝視遠方的月月</h3>
+                            <p>月月<span>好可愛</span>
+
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="col">
+
+                        <div class="card">
+                            <img src="./imgs/UzU4kzP.jpg" alt="">
+                            <h3>凝視遠方的月月</h3>
+                            <p>月月<span>好可愛</span>
+
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="col">
+
+                        <div class="card">
+                            <img src="./imgs/UzU4kzP.jpg" alt="">
+                            <h3>凝視遠方的月月</h3>
+                            <p>月月<span>好可愛</span>
+
+                            </p>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+</body>
+
+</html>

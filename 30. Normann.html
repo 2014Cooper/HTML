@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normann</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            boxing-sizing: border-box
+        }
+
+        header {
+            background-color: rgb(51, 51, 51);
+        }
+
+        /* header>div {
+            margin-bottom: 10px;
+        } */
+
+
+        .middle a {
+            color: white;
+            text-decoration: none;
+            padding-right: 10px;
+            padding-left: 10px;
+
+        }
+
+        .right button {
+            padding: 10px 20px;
+        }
+
+        .nav-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        @media screen and (min-width:768px) {
+            .nav-area {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            header .container {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .middle a {
+                margin-right: 10px;
+            }
+
+        }
+
+        /* heroSection */
+
+        #heroSection {
+            /* margin-bottom: 100px; */
+            background-color: rgb(51, 51, 51);
+            color: white;
+        }
+
+        #heroSection h1 {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        #heroSection img {
+            width: 100%;
+        }
+
+        @media screen and (min-width:768px) {
+            #heroSection {
+                display: flex;
+            }
+
+            #heroSection .box {
+                width: 50%;
+            }
+
+            #heroSection .box:nth-child(1) {
+                order: 2;
+
+                display: flex;
+
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            }
+
+            #heroSection .box:nth-child(2) {
+                order: 1;
+
+            }
+        }
+
+        #Elementor {
+            background-color: burlywood;
+            color: white;
+            text-align: center;
+        }
+
+        /* #Elementor h2,
+        #Elementor p {
+            padding-top: 40px
+        } */
+
+        #Elementor h2 {
+            font-size: 35px;
+            padding: 40px 20px;
+        }
+
+        #Elementor p {
+            padding-bottom: 30px;
+            padding-left: 29px;
+            padding-right: 29px;
+            line-height: 3vh;
+        }
+
+        .demo-img img {
+            width: 80%;
+        }
+
+        .items {
+            display: none;
+        }
+
+        @media screen and (min-width:768px) {
+            #Elementor {
+                position: relative;
+            }
+
+            /* #Elementor .container { */
+            /* width: 80%; */
+            /* margin-left: auto;
+                margin-right: auto; */
+            /* } */
+
+            #Elementor h2 {
+                padding-top: 100px;
+                padding-bottom: 25px;
+                font-size: 40px;
+            }
+
+            #Elementor p {
+                padding-left: 350px;
+                padding-right: 350px;
+                padding-bottom: 40px;
+            }
+
+            .items {
+                display: block;
+            }
+
+            .demo-img img {
+                width: 70%;
+            }
+
+            .item img {
+                width: 100%;
+                border-radius: 5%;
+            }
+
+            .item:nth-child(1) {
+                position: absolute;
+                top: 35%;
+                left: 12%;
+            }
+
+            .item:nth-child(2) {
+                position: absolute;
+                top: 63%;
+                left: 5%;
+            }
+
+            .item:nth-child(3) {
+                position: absolute;
+                top: 82%;
+                left: 8%;
+            }
+
+            .item:nth-child(4) {
+                position: absolute;
+                top: 56%;
+                left: 12%;
+            }
+
+            .item:nth-child(5) {
+                position: absolute;
+                top: 35%;
+                left: 12%;
+            }
+
+            .item:nth-child(6) {
+                position: absolute;
+                top: 35%;
+                left: 12%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="nav-area">
+                <div class="left">
+                    <img src="./imgs/normann-imgs-main/logo-white.svg" alt="">
+                </div>
+                <div class="middle">
+                    <a href="#">Demos</a>
+                    <a href="#">Feature</a>
+                    <a href="#">Documentation</a>
+                </div>
+                <div class="right">
+                    <button>Purchase now →</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="heroSection">
+            <div class="box">
+                <h1>Norman - Furniture Store WooCommerce Theme</h1>
+            </div>
+            <div class="box">
+                <img src="./imgs/normann-imgs-main/section1/ldp_img-1.png" alt="">
+            </div>
+        </section>
+        <section id="Elementor">
+            <div class="container">
+                <h2>Elementor - Visual PageBuilder</h2>
+                <p>Using Petpuzzy – Pet Store WordPress Theme, you can customize and build any layout as you can imagine
+                    with the powerful drag & drop page builder – Elementor.
+                </p>
+                <div class="demo-img">
+                    <img src="./imgs/normann-imgs-main/section3/ldp_img-1-1.png" alt="">
+                </div>
+                <div class="items">
+                    <div class="item">
+                        <img src="./imgs/normann-imgs-main/section3/elementor_items/ldp_elemontor1.png" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="./imgs/normann-imgs-main/section3/elementor_items/ldp_elemontor2.png" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="./imgs/normann-imgs-main/section3/elementor_items/ldp_elemontor3.png" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="./imgs/normann-imgs-main/section3/elementor_items/ldp_elemontor4.png" alt="">
+                    </div>
+                    <!-- <div class="item">
+                        <img src="./imgs/normann-imgs-main/section3/elementor_items/ldp_elemontor5.png" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="./imgs/normann-imgs-main/section3/elementor_items/ldp_elemontor6.png" alt="">
+                    </div> -->
+                    <div class="item">
+                        <img src="" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: blue
+        }
+
+        /* h1class權重大於h1，因此h1class的顏色會蓋掉h1 */
+        .h1class {
+            color: chocolate;
+        }
+
+        /* h1class2的權重等於h1class，因此看順序，後面的會覆蓋前面的 */
+        .h1class2 {
+            color: red;
+        }
+
+        /* 前面有越多的標籤權重越重，但通常不會這樣使用 */
+        h1.h1class2 {
+            color: lightgray
+        }
+
+        /* id權重太重，並且不能重複，因此如果要每個不同的話要先對每個物件命名id，並且針對每個id進行修改
+        通常css是針對class去修改 */
+        #h1id {
+            color: lightseagreen;
+        }
+
+        /* 加入!important就是最大的 */
+        h1 {
+            color: black !important
+        }
+
+
+        /* 權重大小: !important > inline-style > id > class > html標籤 */
+    </style>
+</head>
+
+<body>
+    <!-- inline-style的權重比id大，但是比!important小 -->
+    <h1 id="h1id" class="h1class h1class2" style="color: greenyellow">Hello World</h1>
+</body>
+
+</html>

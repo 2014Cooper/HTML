@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        /* :nth-child() 權重等同於class+標籤 為不存在的元素 (偽類) */
+        section:nth-child(1) {
+            /* font-size: 2rem;
+            background-color: crimson;
+            color: aliceblue; */
+
+            /* 通常不會把寬高寫死，除非已經很確定物件的比例 */
+            display: grid;
+
+            /* auto 自動分配剩下的空間 如果直接寫數值就失去彈性*/
+            grid-template-columns: 1fr 2fr 1fr 2fr;
+
+            /* 1fr(fr: fraction)只能在grid內用 為比例(權重)的概念*/
+            grid-template-rows: 100px 1fr 200px 100px;
+
+            /* row-gap: 5px;
+            column-gap: 5px; */
+            /* gap: 5px 10px; */
+            gap: 5px;
+        }
+
+        .box {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <header>導覽列或logo之類</header>
+
+    <main>
+        <section>
+            <div class="box">box1</div>
+            <div class="box">box2</div>
+            <div class="box">box3</div>
+            <div class="box">box4</div>
+            <div class="box">box5</div>
+            <div class="box">box6</div>
+            <div class="box">box7</div>
+            <div class="box">box8</div>
+            <div class="box">box9</div>
+            <div class="box">box10</div>
+            <div class="box">box11</div>
+            <div class="box">box12</div>
+        </section>
+        <section></section>
+        <section></section>
+
+    </main>
+
+    <footer>連結、copyright、聯絡我們等</footer>
+</body>
+
+</html>

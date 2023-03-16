@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 id="top">top</h2>
+
+    <a href="https://www.google.com.tw/?hl=zh_TW">Google</a>
+
+    <!-- 如果要在新分頁開啟連結就要加 target=_blank _self在原分頁開啟連結(預設) -->
+
+    <!-- 外部連結(導到其他網站連結) -->
+    <a href="https://www.google.com.tw/?hl=zh_TW" target="_blank">Google</a>
+
+    <!-- 伺服器內部連結，透過給內部路徑導到網站其他分頁 -->
+    <a href="./03. nesting.html ">page 3</a>
+    <a href="./04. block.html">page 4</a>
+
+    <!-- 網頁內部連結 帶去網頁內某個ID的位置 -->
+    <section>
+        <a href="#section3">section3</a>
+        <a href="#section4">section4</a>
+    </section>
+
+    <!-- section*6>h2[id="section$"]{section$}  此寫法可以一次生成n(此處為6)個相同的section $代表變數會自己生成 -->
+    <section>
+        <h2 id="section1">section1</h2>
+    </section>
+    <section>
+        <h2 id="section2">section2</h2>
+    </section>
+    <section>
+        <h2 id="section3">section3</h2>
+        <!-- 在本網站設定標籤後，可利用導回標籤的方式帶回原本網站 -->
+        <a href="#top">back</a>
+    </section>
+    <section>
+        <!-- 直接利用anchor導到想要的內部網站 -->
+        <h2 id="section4">section4</h2>
+        <a href="./06. anchor.html">back</a>
+    </section>
+    <section>
+        <h2 id="section5">section5</h2>
+    </section>
+    <section>
+        <h2 id="section6">section6</h2>
+    </section>
+
+</body>
+
+</html>
